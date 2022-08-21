@@ -1,5 +1,11 @@
 function App() {
-    return <h1> Hello From the app component</h1>
+    return(
+        <div className="container">
+             <h1> My App</h1>
+        <p>Hello</p>
+        </div>
+       
+    ) 
 }
 
 export default  App;
