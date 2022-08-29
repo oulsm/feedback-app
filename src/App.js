@@ -41,16 +41,9 @@ function App() {
             
           </Route>
           <Route path='/about' element={<AboutPage/>}>  </Route> 
-          <Route path='/post/:id/:name' element={<Post/>}>  </Route> 
+          <Route path='/post/*' element={<Post/>}>  </Route> 
        </Routes>
-       <Card>
-        <NavLink to='/' activeClassName='active'>
-            Home
-        </NavLink>
-        <NavLink to='/about' activeClassName='active'>
-            About
-        </NavLink>
-       </Card>
+      
        <AboutIconLink />
         </div>
     </Router>
