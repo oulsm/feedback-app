@@ -9,7 +9,7 @@ import FeedbackData  from "./data/FeedbackData";
 import FeedbackForm from './components/FeedbackForm';
 import AboutIconLink from './components/AboutIconLink';
 import AboutPage from './pages/AboutPage';
-import Post from './components/Post';
+import {FeedbackProvider} from './context/FeedbackContext'
 
 function App() {
     const [feedback, setFeedback] = useState(FeedbackData)
@@ -26,6 +26,7 @@ function App() {
     }
 
     return(
+        <FeedbackProvider>
         <Router>
         <Header />
        
@@ -41,12 +42,13 @@ function App() {
             
           </Route>
           <Route path='/about' element={<AboutPage/>}>  </Route> 
-          <Route path='/post/*' element={<Post/>}>  </Route> 
+  
        </Routes>
       
        <AboutIconLink />
         </div>
     </Router>
+    </FeedbackProvider>
        
     ) 
 }
