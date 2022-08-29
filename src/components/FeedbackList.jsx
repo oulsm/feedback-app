@@ -11,7 +11,7 @@ function FeedbackList({}) {
         return <p>No Feedback Yet</p>
     }
 
-    return isLoading ? <Spinner /> : (
+    return isLoading ? <Spinner/> : (
         <div className='feedback-list'>
             <AnimatePresence>
           {feedback.map((item) => (
